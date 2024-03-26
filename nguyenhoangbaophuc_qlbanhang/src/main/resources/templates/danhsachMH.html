@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sach Mat Hang</title>
+</head>
+
+<body>
+    <h1>Danh sach MH</h1>
+    <table border="1">
+        <tr>
+            <th>Ma MH</th>
+            <th>Ten MH</th>
+            <th>Gia </th>
+            <th>Mo ta</th>
+        </tr>
+        <!-- Lặp qua danh sách sản phẩm và hiển thị thông tin của từng sản phẩm -->
+        <tr th:each="mathang : ${dsMH}">
+            <td th:text="${mathang.maMH}"></td>
+            <td th:text="${mathang.tenMH}"></td>
+            <td th:text="${mathang.giaMH}"></td>
+            <td th:text="${mathang.moTa}"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
