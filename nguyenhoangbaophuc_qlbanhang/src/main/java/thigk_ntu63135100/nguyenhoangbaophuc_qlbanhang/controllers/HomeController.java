@@ -1,11 +1,8 @@
 package thigk_ntu63135100.nguyenhoangbaophuc_qlbanhang.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 
-import thigk_ntu63135100.nguyenhoangbaophuc_qlbanhang.services.MatHangService;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
@@ -13,14 +10,4 @@ public class HomeController {
     public String home() {
         return "index";
     }
-
-    @Autowired
-    private MatHangService matHangService;
-
-    @GetMapping("/mathang")
-    public String getAllProducts(Model model) {
-        model.addAttribute("dsMH", matHangService.getAllProducts());
-        return "danhsachMH";
-    }
-
 }
