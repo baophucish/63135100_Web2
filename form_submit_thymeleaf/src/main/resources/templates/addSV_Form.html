@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Them moi sinh vien</title>
+</head>
+
+<body>
+    <div align="center">
+        <h1>Them moi sinh vien</h1>
+        <form action="#" th:action="@{/addSV}" method="post" th:object="${svDTO}">
+            <label for="">Ma so SV:</label>
+            <input type="text" th:field="${svDTO.maSV}"><br>
+
+            <label for="">Ten SV</label>
+            <input type="text" th:field="${svDTO.tenSV}">
+            <button type="submit">Them</button>
+        </form>
+    </div>
+</body>
+
+</html>

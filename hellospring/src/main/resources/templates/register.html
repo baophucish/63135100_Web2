@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            background-color: #fff;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            border: 1px solid #ccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            box-shadow: 0 0 2px 1px rgba(0, 127, 255, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 2px 1px rgba(0, 127, 255, 0.5);
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:focus {
+            outline: none;
+            box-shadow: 0 0 2px 1px rgba(0, 127, 255, 0.5);
+        }
+
+        span {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registration</h1>
+        <form action="#">
+            <label for="username">Username<span>*</span></label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password<span>*</span></label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password<span>*</span></label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit">Register</button>
+            <p>Already have an account? <a th:href="@{/login}">Log in</a></p>
+        </form>
+    </div>
+</body>
+
+</html>

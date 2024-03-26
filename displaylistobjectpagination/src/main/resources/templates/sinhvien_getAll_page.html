@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sach sinh vien</title>
+</head>
+
+<body>
+    <h1>Danh sach sinh vien</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Ma so sinh vien</th>
+                <th>Ho va ten</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="sv:${dsSV}">
+                <td th:text="${sv.maSV}"></td>
+                <td th:text="${sv.tenSV}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div th:if="${dsSV.totalPages > 0}" th:each="pageNumber : ${pageNumbers}">
+        <a th:href="@{/dsSV(size=$(dsSV.size),page=${pageNumber})}" th:text=${pageNumber}
+            th:class="${pageNumber==dsSV.number + 1}"></a>
+    </div>
+</body>
+
+</html>

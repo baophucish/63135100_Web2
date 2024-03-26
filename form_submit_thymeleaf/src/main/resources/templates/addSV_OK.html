@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Them moi sinh vien thanh cong</title>
+    <style type="text/css">
+        span {
+            display: inline-block;
+            width: 200px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div align="center">
+        <h2>Them sinh vien thanh cong</h2>
+        <span>Ma so sv: </span><span th:text="${svDTO.maSV}"></span><br>
+        <span>Ten sv: </span><span th:text="${svDTO.tenSV}"></span><br>
+    </div>
+</body>
+
+</html>
