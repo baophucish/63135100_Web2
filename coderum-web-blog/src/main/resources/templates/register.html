@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{css/formstyle.css}">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img th:src="@{/images/scalelogo.png}" alt="">
+        </div>
+        <h1>Registration</h1>
+        <form action="#">
+            <label for="username">Username<span>*</span></label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password<span>*</span></label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password<span>*</span></label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <input type="submit" value="Đăng ký">
+            <p>Already have an account? <a th:href="@{/login}">Log in</a></p>
+        </form>
+    </div>
+</body>
+
+</html>
